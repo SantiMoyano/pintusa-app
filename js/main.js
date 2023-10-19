@@ -1,15 +1,15 @@
 import Canvas from "./Canvas.js";
+import Pencil from "./Pencil.js";
 
 const canvasElement = document.querySelector("#canvas");
 
-const canvas = new Canvas(canvasElement);
-canvas.initCanvas(canvasElement);
+// Create a new pencil and canvas
+const pencil = new Pencil();
+const canvas = new Canvas(canvasElement, pencil);
 
-console.log("ÄAAA");
-
+// Draw on canvas
 canvasElement.addEventListener("mousedown", function (e) {
-  canvas.setInitialXY(e.offsetX, e.offsetY);
-
+  canvas.setInitialXYLine(e.offsetX, e.offsetY);
   canvasElement.addEventListener("mousemove", mouseMoving);
 });
 
@@ -17,6 +17,6 @@ const mouseMoving = (e) => {
   canvas.drawLine(e.offsetX, e.offsetY);
 };
 
-canvasElement.addEventListener("mouseup", function (e) {
+canvasElement.addEventListener("mouseup", function () {
   canvasElement.removeEventListener("mousemove", mouseMoving);
 });

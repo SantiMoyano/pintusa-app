@@ -1,19 +1,21 @@
 class Canvas {
-  constructor(canvasElement) {
-    this.canvas = canvasElement;
-    this.ctx = canvasElement.getContext("2d");
-    this.canvas.width = canvasElement.width;
-    this.canvas.height = canvasElement.height;
+  constructor(canvas, pencil) {
+    this.canvas = canvas;
+    this.ctx = canvas.getContext("2d");
+    this.canvas.width = canvas.width;
+    this.canvas.height = canvas.height;
+    this.pencil = pencil;
+    this.initPencil();
   }
 
-  initCanvas() {
-    this.ctx.strokeStyle = "#000000";
-    this.ctx.lineWidth = 10;
-    this.ctx.lineCap = "round";
-    this.ctx.lineJoin = "round";
+  initPencil() {
+    this.ctx.strokeStyle = this.pencil.color;
+    this.ctx.lineWidth = this.pencil.grosor;
+    this.ctx.lineCap = this.pencil.lineCap;
+    this.ctx.lineJoin = this.pencil.lineJoin;
   }
 
-  setInitialXY(initialX, initialY) {
+  setInitialXYLine(initialX, initialY) {
     this.initialX = initialX;
     this.initialY = initialY;
   }
@@ -24,8 +26,7 @@ class Canvas {
     this.ctx.lineTo(x1, y1);
     this.ctx.stroke();
 
-    this.initialX = x1;
-    this.initialY = y1;
+    this.setInitialXYLine(x1, y1);
   }
 
   clearCanvas() {

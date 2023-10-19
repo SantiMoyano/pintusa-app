@@ -8,7 +8,7 @@ canvas.initCanvas(canvasElement);
 console.log("ÄAAA");
 
 canvasElement.addEventListener("mousedown", function (e) {
-  canvas.drawLine(e.offsetX, e.offsetY);
+  canvas.setInitialXY(e.offsetX, e.offsetY);
 
   canvasElement.addEventListener("mousemove", mouseMoving);
 });

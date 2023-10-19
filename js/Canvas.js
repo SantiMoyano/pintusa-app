@@ -13,10 +13,19 @@ class Canvas {
     this.ctx.lineJoin = "round";
   }
 
+  setInitialXY(initialX, initialY) {
+    this.initialX = initialX;
+    this.initialY = initialY;
+  }
+
   drawLine(x1, y1) {
     this.ctx.beginPath();
+    this.ctx.moveTo(this.initialX, this.initialY);
     this.ctx.lineTo(x1, y1);
     this.ctx.stroke();
+
+    this.initialX = x1;
+    this.initialY = y1;
   }
 
   clearCanvas() {

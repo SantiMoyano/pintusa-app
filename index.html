@@ -4,29 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pintusa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header>
-      <h1>PINTUSA</h1>
-      <p>Nombre del Archivo</p>
+      <h1>Pintusa</h1>
+      <p>Dibuja algo!</p>
     </header>
-    <ul>
-      <li>Subir imagen</li>
-      <li>Limpiar Lienzo</li>
-      <li>Guardar imagen</li>
-    </ul>
+
     <main>
-      <div>
-        <canvas width="400" height="400"></canvas>
+      <div class="canvas-box">
+        <ul>
+          <li>Subir imagen</li>
+          <li>Limpiar Lienzo</li>
+          <li>Guardar imagen</li>
+        </ul>
+        <canvas width="600" height="400"></canvas>
+        <div class="actions">
+          <span>Color</span>
+          <span>Grosor</span>
+          <span>Lapiz</span>
+          <span>Goma</span>
+        </div>
       </div>
     </main>
     <footer>
-      <div>
-        <span>Color</span>
-        <span>Grosor</span>
-        <span>Lapiz</span>
-        <span>Goma</span>
-      </div>
+      <span>Copyright pintusa</span>
     </footer>
   </body>
 </html>

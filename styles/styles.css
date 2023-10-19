@@ -1,0 +1,75 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gabarito";
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 16px 0 0 32px;
+  border-bottom: 2px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 88dvh;
+}
+
+.canvas-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  width: 600px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+}
+
+canvas {
+  border: 2px solid black;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid black;
+}

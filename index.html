@@ -21,15 +21,25 @@
       <div class="canvas-box">
         <ul>
           <li>Subir imagen</li>
-          <li>Limpiar Lienzo</li>
+          <li id="clear-canvas">Limpiar Lienzo</li>
           <li>Guardar imagen</li>
         </ul>
         <canvas id="canvas" width="600" height="400"></canvas>
         <div class="actions">
-          <span>Color</span>
-          <span>Grosor</span>
-          <span>Lapiz</span>
-          <span>Goma</span>
+          <div>
+            <span>Color</span>
+            <input type="color" id="color" />
+          </div>
+          <div>
+            <span>Grosor</span>
+            <select id="lineWidth">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <span id="pencil">Lapiz</span>
+          <span id="eraser">Goma</span>
         </div>
       </div>
     </main>

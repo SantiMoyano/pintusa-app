@@ -25,7 +25,6 @@ class Canvas {
     this.ctx.moveTo(this.initialX, this.initialY);
     this.ctx.lineTo(x1, y1);
     this.ctx.stroke();
-
     this.setInitialXYLine(x1, y1);
   }
 

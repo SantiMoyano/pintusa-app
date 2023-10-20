@@ -56,3 +56,14 @@ lineWidthTool.addEventListener("change", function (e) {
   pencil.setGrosor(e.target.value * 10);
   canvas.initPencil();
 });
+
+// Selected buttons
+pencilTool.addEventListener("click", function () {
+  pencilTool.classList.add("selected");
+  eraserTool.classList.remove("selected");
+});
+
+eraserTool.addEventListener("click", function () {
+  eraserTool.classList.add("selected");
+  pencilTool.classList.remove("selected");
+});

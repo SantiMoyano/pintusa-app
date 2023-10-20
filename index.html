@@ -18,31 +18,48 @@
     </header>
 
     <main>
-      <div class="canvas-box">
+      <div class="top">
         <ul>
-          <li>Subir imagen</li>
-          <li id="clear-canvas">Limpiar Lienzo</li>
-          <li>Guardar imagen</li>
+          <li><button>Subir imagen</button></li>
+          <li><button id="clear-canvas">Limpiar Lienzo</button></li>
+          <li><button>Guardar imagen</button></li>
         </ul>
-        <canvas id="canvas" width="600" height="400"></canvas>
-        <div class="actions">
+        <div class="canvas-box">
+          <div class="actions">
+            <button id="pencil">
+              <object
+                data="./assets/icons/pencil.svg"
+                width="24"
+                height="24"
+              ></object>
+            </button>
+            <button id="eraser">
+              <object
+                data="./assets/icons/eraser.svg"
+                width="24"
+                height="24"
+              ></object>
+            </button>
+          </div>
+          <canvas id="canvas" width="800" height="500"></canvas>
+        </div>
+        <div class="down-tools">
           <div>
             <span>Color</span>
             <input type="color" id="color" />
           </div>
           <div>
-            <span>Grosor</span>
+            <span>Grosor:</span>
             <select id="lineWidth">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
           </div>
-          <span id="pencil">Lapiz</span>
-          <span id="eraser">Goma</span>
         </div>
       </div>
     </main>
+
     <footer>
       <span>Copyright pintusa</span>
     </footer>

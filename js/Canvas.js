@@ -1,10 +1,10 @@
 class Canvas {
   constructor(canvas, pencil) {
     this.canvas = canvas;
+    this.pencil = pencil;
     this.ctx = canvas.getContext("2d");
     this.canvas.width = canvas.width;
     this.canvas.height = canvas.height;
-    this.pencil = pencil;
     this.initPencil();
   }
 

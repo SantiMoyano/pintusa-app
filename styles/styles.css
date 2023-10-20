@@ -10,6 +10,11 @@ body {
   font-family: "Gabarito";
 }
 
+button {
+  border: none;
+  background-color: unset;
+}
+
 /* Header */
 
 header {
@@ -37,13 +42,40 @@ main {
   min-height: 88dvh;
 }
 
-.canvas-box {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 24px 0;
-  width: 600px;
+}
+
+.canvas-box {
+  display: flex;
+  align-items: self-start;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 4px;
+}
+
+button {
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  border-color: white;
+  background-color: white;
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+object {
+  position: relative;
+  z-index: -1;
 }
 
 ul {
@@ -51,8 +83,18 @@ ul {
   align-items: center;
   justify-content: center;
   list-style: none;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
+}
+
+li {
+  padding: 4px;
+}
+
+button {
+  font-family: "Gabarito";
+  font-size: 16px;
+  border: black solid 2px;
 }
 
 canvas {
@@ -61,8 +103,25 @@ canvas {
 
 .actions {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.down-tools {
+  display: flex;
+  align-self: self-start;
+  align-items: center;
+}
+
+.down-tools div {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+#color {
+  padding: 0;
 }
 
 /* Footer */

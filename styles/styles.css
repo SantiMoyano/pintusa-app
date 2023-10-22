@@ -53,6 +53,7 @@ main {
 .canvas-box {
   display: flex;
   align-items: self-start;
+  min-width: 400px;
 }
 
 .actions {
@@ -157,6 +158,11 @@ select {
 
 select:hover {
   border-color: #999;
+}
+
+input[type="file"] {
+  appearance: none;
+  border: 2px solid black;
 }
 
 /* Footer */

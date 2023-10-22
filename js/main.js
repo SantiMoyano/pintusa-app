@@ -1,12 +1,14 @@
 import Canvas from "./Canvas.js";
 import Pencil from "./Pencil.js";
+import { uploadImage } from "./imageUploader.js";
 
-const canvasElement = document.querySelector("#canvas");
+let canvasElement = document.querySelector("#canvas");
 const canvasClear = document.querySelector("#clear-canvas");
 const eraserTool = document.querySelector("#eraser");
 const pencilTool = document.querySelector("#pencil");
 const colorTool = document.querySelector("#color");
 const lineWidthTool = document.querySelector("#lineWidth");
+let selectedImage = document.querySelector("#file-input");
 
 // Create a new pencil and canvas
 const pencil = new Pencil();
@@ -66,4 +68,10 @@ pencilTool.addEventListener("click", function () {
 eraserTool.addEventListener("click", function () {
   eraserTool.classList.add("selected");
   pencilTool.classList.remove("selected");
+});
+
+// selectImage
+
+selectedImage.addEventListener("change", () => {
+  uploadImage(canvas, canvasElement, selectedImage);
 });

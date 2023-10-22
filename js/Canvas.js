@@ -31,6 +31,18 @@ class Canvas {
   clearCanvas() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
+
+  drawImageOnCanvas(img) {
+    this.ctx.drawImage(img, 0, 0);
+  }
+
+  setCanvasWidth(width) {
+    this.canvas.width = width;
+  }
+
+  setCanvasHeight(height) {
+    this.canvas.height = height;
+  }
 }
 
 export default Canvas;

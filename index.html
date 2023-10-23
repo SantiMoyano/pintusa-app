@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <h1>Pintusa</h1>
+      <h1>🎨Pintusa</h1>
       <p>Dibuja algo!</p>
     </header>
 
@@ -28,40 +28,42 @@
             <label id="clear-canvas">Limpiar Lienzo</label>
           </li>
           <li>
-            <label for="file-input">Guardar imagen</label>
+            <label id="save-img">Guardar imagen</label>
           </li>
         </ul>
-        <div class="canvas-box">
-          <div class="actions">
-            <button id="pencil" class="selected">
-              <object
-                data="./assets/icons/pencil.svg"
-                width="24"
-                height="24"
-              ></object>
-            </button>
-            <button id="eraser">
-              <object
-                data="./assets/icons/eraser.svg"
-                width="24"
-                height="24"
-              ></object>
-            </button>
+        <div class="container">
+          <div class="canvas-box">
+            <div class="actions">
+              <button id="pencil" class="selected">
+                <object
+                  data="./assets/icons/pencil.svg"
+                  width="24"
+                  height="24"
+                ></object>
+              </button>
+              <button id="eraser">
+                <object
+                  data="./assets/icons/eraser.svg"
+                  width="24"
+                  height="24"
+                ></object>
+              </button>
+            </div>
+            <canvas id="canvas" width="800" height="400"></canvas>
           </div>
-          <canvas id="canvas" width="800" height="500"></canvas>
-        </div>
-        <div class="down-tools">
-          <div>
-            <span>Color:</span>
-            <input type="color" id="color" />
-          </div>
-          <div>
-            <span>Grosor:</span>
-            <select id="lineWidth">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+          <div class="down-tools">
+            <div>
+              <label for="color">Color</label>
+              <input type="color" id="color" />
+            </div>
+            <div>
+              <label for="lineWidth">Grosor </label>
+              <select id="lineWidth">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>

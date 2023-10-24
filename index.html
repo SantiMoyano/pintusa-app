@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/form.css" />
   </head>
   <body>
     <header>
@@ -67,6 +68,21 @@
           </div>
         </div>
       </div>
+      <hr />
+      <h3>Ajustar dimensiones del canvas (px)</h3>
+      <form id="canvas-dimensions-form">
+        <div id="canvas-dimensions-inputs">
+          <div>
+            <label for="canvas-width">Ancho del canvas:</label>
+            <input type="number" id="canvas-width" placeholder="Ancho" />
+          </div>
+          <div>
+            <label for="canvas-height">Alto del canvas:</label>
+            <input type="number" id="canvas-height" placeholder="Alto" />
+          </div>
+        </div>
+        <button type="submit">Cambiar dimensiones</button>
+      </form>
     </main>
 
     <footer>

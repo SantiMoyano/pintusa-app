@@ -3,14 +3,14 @@ import Pencil from "./Pencil.js";
 import { uploadImage } from "./imageUploader.js";
 import { saveImage } from "./saveImage.js";
 
-let canvasElement = document.querySelector("#canvas");
+const canvasElement = document.querySelector("#canvas");
 const canvasClear = document.querySelector("#clear-canvas");
 const eraserTool = document.querySelector("#eraser");
 const pencilTool = document.querySelector("#pencil");
 const colorTool = document.querySelector("#color");
 const lineWidthTool = document.querySelector("#lineWidth");
-let selectedImage = document.querySelector("#file-input");
-let saveImg = document.querySelector("#save-img");
+const selectedImage = document.querySelector("#file-input");
+const saveImg = document.querySelector("#save-img");
 
 // Create a new pencil and canvas
 const pencil = new Pencil();
@@ -73,11 +73,33 @@ eraserTool.addEventListener("click", function () {
 });
 
 // selectImage
-
 selectedImage.addEventListener("change", () => {
   uploadImage(canvas, canvasElement, selectedImage);
 });
 
+// save image
 saveImg.addEventListener("click", () => {
   saveImage(canvasElement);
+});
+
+// change canvas size
+const canvasDimensionsForm = document.getElementById("canvas-dimensions-form");
+const canvasWidthInput = document.getElementById("canvas-width");
+const canvasHeightInput = document.getElementById("canvas-height");
+
+canvasDimensionsForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita el envío del formulario por defecto
+
+  // Obtiene los valores del ancho y alto del canvas desde los campos de entrada
+  let newWidth = parseInt(canvasWidthInput.value);
+  let newHeight = parseInt(canvasHeightInput.value);
+
+  // Cambia el tamaño del canvas
+  canvasElement.width = newWidth;
+  canvasElement.height = newHeight;
+  canvas.setCanvasWidth(newWidth);
+  canvas.setCanvasHeight(newHeight);
+
+  // También puedes borrar el contenido existente si lo deseas
+  canvas.clearCanvas();
 });

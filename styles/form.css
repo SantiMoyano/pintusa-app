@@ -1,0 +1,48 @@
+#canvas-dimensions-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+}
+
+#canvas-dimensions-form input {
+  width: 64px;
+  height: 100%;
+  padding: 4px;
+}
+
+#canvas-dimensions-form button {
+  font-family: "Gabarito";
+  padding: 8px;
+  margin: 16px;
+  font-size: 16px;
+}
+
+#canvas-dimensions-form button:hover {
+  border: solid 2px white;
+}
+
+#canvas-dimensions-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#canvas-dimensions-inputs div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 0px;
+}
+
+#canvas-dimensions-inputs label {
+  border: none;
+  width: 50%;
+}
+
+hr {
+  margin: 16px 0;
+  width: 48rem;
+}

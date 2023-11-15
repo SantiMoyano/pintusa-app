@@ -21,6 +21,7 @@ export function uploadImage(canvas, canvasElement, fileInput) {
       }
 
       canvas.drawImageOnCanvas(img);
+      canvas.initPencil();
     });
   });
   reader.readAsDataURL(file);

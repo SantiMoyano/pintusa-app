@@ -100,6 +100,7 @@ canvasDimensionsForm.addEventListener("submit", function (e) {
   canvas.setCanvasWidth(newWidth);
   canvas.setCanvasHeight(newHeight);
 
+  canvas.initPencil();
   // También puedes borrar el contenido existente si lo deseas
   canvas.clearCanvas();
 });
